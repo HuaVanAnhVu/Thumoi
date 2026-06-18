@@ -1412,7 +1412,7 @@
 
                         <!-- Invitation content area -->
                         <h1 class="letter-title">Thư Mời Tốt Nghiệp</h1>
-                        <h3 class="letter-subtitle">Class of 2026</h3>
+                        <h3 class="letter-subtitle">🌸Class of 2026🌸</h3>
 
                         <div class="letter-writing-area">
                             <!-- Typewritten Text -->
@@ -1481,7 +1481,8 @@
                 <!-- RSVP Success State -->
                 <div class="rsvp-success" id="rsvp-success-card">
                     <h3>Cảm ơn bạn!</h3>
-                    <p id="rsvp-thankyou-text">Lời phản hồi và chúc mừng của bạn đã được gửi thành công đến Kiều Trang🌷.
+                    <p id="rsvp-thankyou-text">Lời phản hồi và chúc mừng của bạn đã được gửi thành công đến Kiều
+                        Trang🌷.
                     </p>
                     <button class="rsvp-submit" onclick="closeRSVPModal()" style="margin-top: 15px;">Đóng</button>
                 </div>
@@ -1501,7 +1502,7 @@
                 </div>
                 <div class="form-group">
                     <label for="cfg-grad-name">Tên Tân Khoa / Thủ Khoa</label>
-                    <input type="text" id="cfg-grad-name" value="Phan Thị Thu Trang(Kiều Trang 🌷)">
+                    <input type="text" id="cfg-grad-name" value="Phan Thị Thu Trang(Kiều Trang🌷)">
                 </div>
                 <div class="form-group">
                     <label for="cfg-degree">Chuyên Ngành Tốt Nghiệp</label>
@@ -1514,7 +1515,7 @@
                 <div class="form-group">
                     <label for="cfg-venue">Địa Điểm Tổ Chức</label>
                     <textarea id="cfg-venue"
-                        rows="2">Trung tâm hội thảo Trường Đại Học Quảng Nam (DQU), ĐC: 102 Hùng Vương, Tam Kỳ, TP Đà Nẵng</textarea>
+                        rows="2">Trung tâm hội thảo Trường Đại Học Quảng Nam (DQU), 102 Hùng Vương, Tam Kỳ, TP Đà Nẵng</textarea>
                 </div>
                 <div class="form-group" style="margin-top: 20px; display: flex; gap: 10px;">
                     <button class="customizer-save" onclick="applySettings()" style="flex: 1;">Xem Thử</button>
@@ -1538,7 +1539,7 @@
             gradName: "Phan Thị Thu Trang",
             degree: "Sư phạm Toán - Khoa Toán Tin",
             date: "08:00 - 11:00 -- Thứ Tư, 24 Tháng 6, 2026",
-            venue: "Trung tâm hội thảo Trường Đại Học Quảng Nam (DQU), ĐC: 102 Hùng Vương, Tam Kỳ, TP Đà Nẵng"
+            venue: "Trung tâm hội thảo Trường Đại Học Quảng Nam (DQU), 102 Hùng Vương, Tam Kỳ, TP Đà Nẵng"
         };
 
         // Load configuration from URL parameters if available
@@ -1873,7 +1874,7 @@
             pen.style.opacity = '1';
 
             // Compose invitation string dynamically
-            const fullText = `Thân gửi: ${config.guest}\n\n🎓 IT'S MY GRADUATION DAY!\n🎉\nMột hành trình khép lại, một chặng đường mới chính thức bắt đầu!\n\nMình rất vui và trân trọng kính mời bạn đến tham dự Lễ Tốt Nghiệp và cùng mình lưu giữ những khoảnh khắc đáng nhớ trong ngày đặc biệt này của:\n\n⭐ Tân cử nhân: ${config.gradName}\n🎓 Chuyên ngành: ${config.degree}\nCùng mình đánh dấu cột mốc đặc biệt vào:\n⏱ Thời gian: ${config.date}\n📍 Địa điểm: ${config.venue}\n\nSự hiện diện của bạn sẽ là niềm vui lớn nhất, còn những lời chúc tốt đẹp sẽ là hành trang quý giá để mình tự tin bước tiếp trên chặng đường mới💫.\n\nSee you at my Graduation!🌷🎓`;
+            const fullText = `Thân gửi: ${config.guest}\n\n🎓Một hành trình khép lại, một chặng đường mới chính thức bắt đầu!\n\nMình rất vui và trân trọng kính mời bạn đến tham dự Lễ Tốt Nghiệp và cùng mình lưu giữ những khoảnh khắc đáng nhớ trong ngày đặc biệt này của:\n\n⭐ Tân cử nhân: ${config.gradName}\n🎓 Chuyên ngành: ${config.degree}\nCùng mình đánh dấu cột mốc đặc biệt vào:\n⏱ Thời gian: ${config.date}\n📍 Địa điểm: ${config.venue}\n\nSự hiện diện của bạn sẽ là niềm vui lớn nhất, còn những lời chúc tốt đẹp sẽ là hành trang quý giá để mình tự tin bước tiếp trên chặng đường mới💫.\n\nSee you at my Graduation`;
 
             let charIndex = 0;
 
@@ -1905,6 +1906,12 @@
 
                     setTimeout(() => {
                         pen.style.opacity = '0';
+
+                        invitationBody.innerHTML += `
+                            <div style="text-align:center;">
+                                <img src="anh.png" style="width:600px; border-radius:10px; display:inline-block;">
+                            </div>
+                        `;
 
                         // Show RSVP button BEFORE fitting to screen
                         rsvpBtn.classList.add('show');
