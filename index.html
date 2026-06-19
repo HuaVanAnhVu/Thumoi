@@ -22,6 +22,20 @@
             padding: 0;
         }
 
+        /* Thêm class này vào trong thẻ <style> */
+        .invitation-image {
+            width: 100%;
+            /* Luôn chiếm 100% chiều ngang khung chứa */
+            max-width: 300px;
+            /* Nhưng không vượt quá 300px trên máy tính */
+            height: auto;
+            /* Tự động điều chỉnh chiều cao theo tỉ lệ */
+            border-radius: 10px;
+            display: block;
+            margin: 10px auto;
+            /* Căn giữa hình ảnh */
+        }
+
         :root {
             --wood-dark: #1f110a;
             --wood-light: #3b2216;
@@ -1907,11 +1921,12 @@
                     setTimeout(() => {
                         pen.style.opacity = '0';
 
+                        // Thay đoạn cũ bằng đoạn này:
                         invitationBody.innerHTML += `
-                            <div style="text-align:center;">
-                                <img src="anh.png" style="width:550px; border-radius:10px; display:inline-block;">
-                            </div>
-                        `;
+                        <div style="text-align:center; padding: 10px;">
+                            <img src="anh.png" class="invitation-image" alt="Ảnh tốt nghiệp">
+                        </div>
+`;
 
                         // Show RSVP button BEFORE fitting to screen
                         rsvpBtn.classList.add('show');
